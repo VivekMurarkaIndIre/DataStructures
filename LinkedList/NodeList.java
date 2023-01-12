@@ -13,7 +13,7 @@ public class NodeList {
     public void travers(){
         Node ptr= head;
         while(ptr != tail){
-            System.out.println(ptr.value+", ");
+            System.out.print(ptr.value+", ");
             ptr = ptr.next;
         }
     }
