@@ -53,8 +53,8 @@ public class RandomClone {
             currNewNode= currNewNode.next;
         }
 
-        travers(newHead);
-
+//        travers(newHead);
+//
         currNewNode= newHead;
         while(currNewNode != null){
             if(currNewNode.random.random != null) {
