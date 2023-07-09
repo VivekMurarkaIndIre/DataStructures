@@ -7,7 +7,7 @@ def findNumber(arr):
     while(start<=end):
         if(arr[start]<currentMax):
             start+=1
-        elif(arr[start]>currentMax):
+        elif(arr[start]>=currentMax):
             currentMax=arr[start]
             smallestNumberFromRigth=arr[start]
             if(arr[end]>=smallestNumberFromRigth):
@@ -15,8 +15,6 @@ def findNumber(arr):
             else:
                 smallestNumberFromRigth=-1
                 start+=1
-        else:
-            start+=1
         
     return smallestNumberFromRigth
 
