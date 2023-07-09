@@ -19,7 +19,7 @@ def sortArray(arr):
             mid=mid+1
 
 
-arr = [1, 1, 0, 2, 1, 2, 0, 2, 1, 0, 0, 2, 1, 0];
+arr = [1, 1, 0, 2, 1, 2, 0, 2, 1, 0, 0, 2, 1, 0]
 print(arr)
 sortArray(arr)
 print(arr)
