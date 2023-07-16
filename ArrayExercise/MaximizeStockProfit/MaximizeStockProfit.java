@@ -3,8 +3,8 @@ package ArrayExercise.MaximizeStockProfit;
 public class MaximizeStockProfit {
 
     public static void main(String[] args) {
-        //int arr[]  = {98,178,250,300,40,540,690};
-        int prices[] ={7,6,4,3,1};
+        int prices[]  = {98,178,250,300,40,540,690};
+        // int prices[] ={7,6,4,3,1};
         int boughtPrice=-1,totalProfit=0, i,profit=0;
         boolean hasStock= false;
         for( i=0;i<prices.length-1;i++){
