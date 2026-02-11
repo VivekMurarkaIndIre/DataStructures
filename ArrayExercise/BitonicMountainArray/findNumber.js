@@ -1,24 +1,19 @@
 
-function findNumber(arr,start,end){
-    let mid = arr.length/2;
-    if(start === end){
+// Recursive version - O(log n) time, O(log n) space
+function findNumber(arr, start, end) {
+    // Base case: single element is the peak
+    if (start === end) {
         return arr[start];
     }
-    if(end === start+1){
-        
-        if(arr[start]<arr[end]){
-            return arr[end];
-        }else{
-            return arr[start];
-        }
-    }
-
-    if(arr[mid]>arr[mid-1] && arr[mid] <arr[mid+1]){
-        return findNumber(arr,mid,end);
-    }else if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1]){
-        return arr[mid];
-    }else if(arr[mid]<arr[mid-1] && arr[mid]>arr[mid+1]){
-        return findNumber(arr,start,mid);
+    
+    let mid = Math.floor((start + end) / 2);
+    
+    // If mid is greater than next element, peak is at mid or to the left
+    if (arr[mid] > arr[mid + 1]) {
+        return findNumber(arr, start, mid);
+    } else {
+        // Peak is to the right
+        return findNumber(arr, mid + 1, end);
     }
 }
 
